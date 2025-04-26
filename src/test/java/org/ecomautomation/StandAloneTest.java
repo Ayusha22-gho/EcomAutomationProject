@@ -26,21 +26,22 @@ public class StandAloneTest {
 
         LandingPage landingPage = new LandingPage(driver);
         landingPage.goTo();
-        landingPage.loginApplication("ayghosh977@gmail.com","Rules123");
 
-        ProductCatalogue pdp = new ProductCatalogue(driver);
+        ProductCatalogue pdp = landingPage.loginApplication("ayghosh977@gmail.com","Rules123");
+        //ProductCatalogue pdp = new ProductCatalogue(driver);
         List<WebElement> products = pdp.getProductList();
-        pdp.addProducToCart(productName);
+        CartPage cart = pdp.addProducToCart(productName);
 
-        CartPage cart = new CartPage(driver);
+        //CartPage cart = new CartPage(driver);
         Boolean matchedItem = cart.getCartMatchedItem(productName);
         Assert.assertTrue(matchedItem);
-        cart.clickCheckout();
 
-        ShippingPage ship = new ShippingPage(driver);
-        ship.selectCountry("india");
+        ShippingPage ship = cart.clickCheckout();
+        //ShippingPage ship = new ShippingPage(driver);
+         ship.selectCountry("india");
+        OrderConfirmation order = ship.placeOrder();
 
-        OrderConfirmation order = new OrderConfirmation(driver);
+        // OrderConfirmation order = new OrderConfirmation(driver);
         String confirmationMessage = order.orderConfirm();
         Assert.assertTrue(confirmationMessage.equalsIgnoreCase("Thankyou for the order."));
 

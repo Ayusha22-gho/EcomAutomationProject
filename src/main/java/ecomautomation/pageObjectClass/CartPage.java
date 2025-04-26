@@ -36,8 +36,10 @@ public class CartPage extends AbstractComponent {
         return matchedItem;
     }
 
-    public void clickCheckout(){
+    public ShippingPage clickCheckout(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()",checkoutButton);
+        ShippingPage ship = new ShippingPage(driver);
+        return ship;
     }
 }

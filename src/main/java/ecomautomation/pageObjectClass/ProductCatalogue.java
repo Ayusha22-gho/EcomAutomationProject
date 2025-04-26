@@ -45,13 +45,15 @@ public class ProductCatalogue extends AbstractComponent {
         return prod;
     }
 
-    public void addProducToCart(String productName){
+    public CartPage addProducToCart(String productName){
         //this add to card element is within the scope of the prod element therefore
         //we are not using driver.finfElement and using getProductByName(productName).findElement
         WebElement prod = getProductByName(productName);
         prod.findElement(addToCart).click();
         waitForElementToAppear(toastMessage);
         waitForElementToDisappear(spinner);
+        CartPage cart = new CartPage(driver);
+        return cart;
 
     }
 

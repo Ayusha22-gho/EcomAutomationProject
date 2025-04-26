@@ -30,6 +30,12 @@ public class ShippingPage extends AbstractComponent {
         waitForElementToAppear(countryResults);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()",selectCountry);
+    }
+
+    public OrderConfirmation placeOrder(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()",placeOrderButton);
+        OrderConfirmation order = new OrderConfirmation(driver);
+        return order;
     }
 }
