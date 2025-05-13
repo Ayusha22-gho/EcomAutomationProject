@@ -19,7 +19,7 @@ public class ErrorValidationTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(groups = {"ErrorHandling"})
     public void productErrorValidation() throws IOException {
         String productName = "ZARA COAT 3";
         ProductCatalogue pdp = landingPage.loginApplication("ayghosh977@gmail.com","Rules123");
