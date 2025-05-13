@@ -11,13 +11,14 @@ import java.util.List;
 
 public class StandAloneTest extends BaseTest {
 
+    String productName = "ZARA COAT 3";
     @Test
     public void submitOrder() throws IOException {
-        String productName = "ZARA COAT 3";
+
         ProductCatalogue pdp = landingPage.loginApplication("ayghosh977@gmail.com","Rules123");
         List<WebElement> products = pdp.getProductList();
-        CartPage cart = pdp.addProducToCart(productName);
-
+        pdp.addProducToCart(productName);
+        CartPage cart = pdp.goToCartPage();
 
         Boolean matchedItem = cart.getCartMatchedItem(productName);
         Assert.assertTrue(matchedItem);
@@ -30,5 +31,12 @@ public class StandAloneTest extends BaseTest {
         String confirmationMessage = order.orderConfirm();
         Assert.assertTrue(confirmationMessage.equalsIgnoreCase("Thankyou for the order."));
 
+    }
+
+    @Test(dependsOnMethods = {"submitOrder"})
+    public void orderHistoryTest(){
+        ProductCatalogue pdp = landingPage.loginApplication("ayghosh977@gmail.com","Rules123");
+        OrderHistoryPage orderHistory = pdp.goToOrderHistoryPage();
+        Assert.assertTrue(orderHistory.verifyOrderDisplay(productName));
     }
 }

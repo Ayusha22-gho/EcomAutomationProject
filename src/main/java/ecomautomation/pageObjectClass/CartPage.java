@@ -30,7 +30,6 @@ public class CartPage extends AbstractComponent {
     WebElement checkoutButton;
 
     public Boolean getCartMatchedItem(String productName){
-        goToCartPage();
         waitForElementToAppear(cartItemSection);
         Boolean matchedItem = cartItems.stream().anyMatch(cartItem -> cartItem.getText().equals(productName));
         return matchedItem;

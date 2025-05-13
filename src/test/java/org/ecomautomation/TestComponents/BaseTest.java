@@ -21,16 +21,16 @@ public class BaseTest {
         //properties class that can read properties and decide on
         //runtime which browser to execute
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//java//ecomautomation//resources//GlobalData.properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//src//main//java//ecomautomation//resources//GlobalData.properties");
         prop.load(fis);
         String broswerName = prop.getProperty("browser");
 
-        if(broswerName.equalsIgnoreCase("chrome")) {
+        if (broswerName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-        }else if(broswerName.equalsIgnoreCase("firefox")){
+        } else if (broswerName.equalsIgnoreCase("firefox")) {
 
-        }else if(broswerName.equalsIgnoreCase("edge")){
+        } else if (broswerName.equalsIgnoreCase("edge")) {
 
         }
 
@@ -40,15 +40,15 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public  LandingPage launchApplication() throws IOException {
-       WebDriver driver =  initializeDriver();
+    public LandingPage launchApplication() throws IOException {
+        WebDriver driver = initializeDriver();
         landingPage = new LandingPage(driver);
         landingPage.goTo();
         return landingPage;
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
     }
 }

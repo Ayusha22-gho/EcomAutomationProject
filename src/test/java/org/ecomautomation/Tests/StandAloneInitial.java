@@ -24,9 +24,9 @@ public class StandAloneInitial{
         ProductCatalogue pdp = landingPage.loginApplication("ayghosh977@gmail.com","Rules123");
         //ProductCatalogue pdp = new ProductCatalogue(driver);
         List<WebElement> products = pdp.getProductList();
-        CartPage cart = pdp.addProducToCart(productName);
+        pdp.addProducToCart(productName);
 
-        //CartPage cart = new CartPage(driver);
+        CartPage cart = pdp.goToCartPage();
         Boolean matchedItem = cart.getCartMatchedItem(productName);
         Assert.assertTrue(matchedItem);
 

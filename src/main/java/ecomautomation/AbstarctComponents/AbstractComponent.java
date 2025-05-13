@@ -1,5 +1,7 @@
 package ecomautomation.AbstarctComponents;
 
+import ecomautomation.pageObjectClass.CartPage;
+import ecomautomation.pageObjectClass.OrderHistoryPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,6 +23,9 @@ public class AbstractComponent {
     @FindBy(css = "[routerlink*=\"cart\"]")
     WebElement cartHeader;
 
+    @FindBy(css = "[routerlink*=\"myorders\"]")
+    WebElement orderHeader;
+
     public void waitForElementToAppear(By findBy) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
@@ -38,7 +43,15 @@ public class AbstractComponent {
         wait.until(ExpectedConditions.invisibilityOf(ele));
     }
 
-    public void goToCartPage() {
+    public CartPage goToCartPage() {
         cartHeader.click();
+        CartPage cartPage = new CartPage(driver);
+        return cartPage;
+    }
+
+    public OrderHistoryPage goToOrderHistoryPage() {
+        orderHeader.click();
+        OrderHistoryPage orderHistory = new OrderHistoryPage(driver);
+        return orderHistory;
     }
 }
