@@ -1,22 +1,16 @@
-package org.ecomautomation;
+package org.ecomautomation.Tests;
 
 import ecomautomation.pageObjectClass.*;
-import io.cucumber.java.et.Ja;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
 
-public class StandAloneTest {
+public class StandAloneInitial{
     public static void main(String[] args){
         String productName = "ZARA COAT 3";
         WebDriverManager.chromedriver().setup();
@@ -38,7 +32,7 @@ public class StandAloneTest {
 
         ShippingPage ship = cart.clickCheckout();
         //ShippingPage ship = new ShippingPage(driver);
-         ship.selectCountry("india");
+        ship.selectCountry("india");
         OrderConfirmation order = ship.placeOrder();
 
         // OrderConfirmation order = new OrderConfirmation(driver);
@@ -93,14 +87,14 @@ public class StandAloneTest {
 //        driver.findElement(By.cssSelector("input[placeholder='Select Country']")).sendKeys("india");
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
 
-       //driver.findElement(By.xpath("(//*[contains(@class,'ta-results')]/button)[2]")).click();
-  //      js.executeScript("arguments[0].click()",driver.findElement(By.xpath("(//*[contains(@class,'ta-results')]/button)[2]")));
-       // driver.findElement(By.cssSelector(".action__submit")).click();
-   //     js.executeScript("arguments[0].click()",driver.findElement(By.cssSelector(".action__submit")));
+        //driver.findElement(By.xpath("(//*[contains(@class,'ta-results')]/button)[2]")).click();
+        //      js.executeScript("arguments[0].click()",driver.findElement(By.xpath("(//*[contains(@class,'ta-results')]/button)[2]")));
+        // driver.findElement(By.cssSelector(".action__submit")).click();
+        //     js.executeScript("arguments[0].click()",driver.findElement(By.cssSelector(".action__submit")));
 
-     //---------------------OrderConfirmationPage-------------------//
-      //  String confirmationMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
-       // Assert.assertTrue(confirmationMessage.equalsIgnoreCase("Thankyou for the order."));
-       //driver.close();
+        //---------------------OrderConfirmationPage-------------------//
+        //  String confirmationMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
+        // Assert.assertTrue(confirmationMessage.equalsIgnoreCase("Thankyou for the order."));
+        //driver.close();
     }
 }

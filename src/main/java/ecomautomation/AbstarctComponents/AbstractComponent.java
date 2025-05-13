@@ -15,25 +15,30 @@ public class AbstractComponent {
 
     public AbstractComponent(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(css = "[routerlink*=\"cart\"]")
     WebElement cartHeader;
 
-    public void waitForElementToAppear(By findBy){
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+    public void waitForElementToAppear(By findBy) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 
-        }
+    }
 
-        public void waitForElementToDisappear(WebElement ele){
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    public void waitForWebElementToAppear(WebElement element){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
 
-            wait.until(ExpectedConditions.invisibilityOf(ele));
-        }
+    public void waitForElementToDisappear(WebElement ele) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
-        public void goToCartPage(){
-            cartHeader.click();
-        }
+        wait.until(ExpectedConditions.invisibilityOf(ele));
+    }
+
+    public void goToCartPage() {
+        cartHeader.click();
+    }
 }
