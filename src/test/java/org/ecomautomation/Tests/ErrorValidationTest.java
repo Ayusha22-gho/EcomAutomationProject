@@ -3,6 +3,7 @@ package org.ecomautomation.Tests;
 import ecomautomation.pageObjectClass.CartPage;
 import ecomautomation.pageObjectClass.ProductCatalogue;
 import org.ecomautomation.TestComponents.BaseTest;
+import org.ecomautomation.TestComponents.Retry;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,14 +13,14 @@ import java.util.List;
 
 public class ErrorValidationTest extends BaseTest {
 
-    @Test
-    public void loginErrorValidation(){
+    @Test(retryAnalyzer = Retry.class)
+    public void loginErrorValidation(r){
         ProductCatalogue pdp = landingPage.loginApplication("ayghosh977@gmail.com","sample");
-        Assert.assertEquals("Incorrect email or password.",landingPage.getErrorMessage());
+        Assert.assertEquals("Incorrect email password.",landingPage.getErrorMessage());
 
     }
 
-    @Test(groups = {"ErrorHandling"})
+    @Test(groups = {"ErrorHandling"} , retryAnalyzer = Retry.class)
     public void productErrorValidation() throws IOException {
         String productName = "ZARA COAT 3";
         ProductCatalogue pdp = landingPage.loginApplication("ayghosh977@gmail.com","Rules123");
