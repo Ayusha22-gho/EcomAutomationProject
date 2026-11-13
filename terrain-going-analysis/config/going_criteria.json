@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "_note": "ILLUSTRATIVE criteria for a course demonstration. They are not doctrinal values and must be replaced by the vehicle-specific data and doctrine of the user before operational use.",
+  "class_codes": {"GO": 1, "SLOW_GO": 2, "NO_GO": 3, "RECCE": 4},
+  "class_labels": {"1": "GO", "2": "SLOW-GO", "3": "NO-GO", "4": "REQUIRES RECONNAISSANCE"},
+  "class_colours": {"1": "#2e9e44", "2": "#f2c230", "3": "#d7301f", "4": "#7b4fd6"},
+  "profiles": {
+    "wheeled_4x4": {
+      "description": "Light/medium wheeled vehicle (e.g. 4x4 patrol vehicle), illustrative",
+      "slope_slow_go_deg": 15.0,
+      "slope_no_go_deg": 30.0,
+      "step_height_no_go_m": 0.6,
+      "max_ford_depth_m": 0.75,
+      "canopy_height_tree_m": 3.0,
+      "canopy_cover_no_go": 0.65,
+      "scrub_height_min_m": 0.6,
+      "built_up_is_slow_go": true,
+      "speeds_kmh": {"road": 40, "track": 25, "GO": 18, "SLOW_GO": 7, "RECCE": 5}
+    },
+    "tracked": {
+      "description": "Tracked vehicle (e.g. APC), illustrative",
+      "slope_slow_go_deg": 20.0,
+      "slope_no_go_deg": 35.0,
+      "step_height_no_go_m": 0.9,
+      "max_ford_depth_m": 1.2,
+      "canopy_height_tree_m": 3.0,
+      "canopy_cover_no_go": 0.80,
+      "scrub_height_min_m": 1.5,
+      "built_up_is_slow_go": true,
+      "speeds_kmh": {"road": 35, "track": 25, "GO": 22, "SLOW_GO": 10, "RECCE": 5}
+    }
+  },
+  "seasons": {
+    "dry": {
+      "description": "Dry season: firm soils, low water levels",
+      "twi_slow_go": 9.5,
+      "twi_recce": 11.0,
+      "cultivated_is_slow_go": false,
+      "marsh_class": "RECCE"
+    },
+    "wet": {
+      "description": "Wet season: saturated low ground, ploughed fields soft",
+      "twi_slow_go": 7.8,
+      "twi_recce": 9.0,
+      "cultivated_is_slow_go": true,
+      "marsh_class": "NO_GO"
+    }
+  },
+  "data_confidence": {
+    "recce_below": 0.45,
+    "stream_bank_buffer_m": 15,
+    "stream_bank_recce_below": 0.7,
+    "_note": "Cells whose UAS-derived ground surface confidence is below this value cannot be classified reliably and are flagged REQUIRES RECONNAISSANCE unless already NO-GO."
+  },
+  "generalisation": {
+    "min_mapping_unit_m2": 100,
+    "_note": "Patches smaller than the MMU are merged into the surrounding class (sieve), except NO-GO linear obstacles, which are burned back in afterwards."
+  },
+  "slope_baseline_smoothing_sigma_m": 2.0,
+  "route_weights": {
+    "time": 0.35,
+    "risk": 0.25,
+    "exposure": 0.25,
+    "crossings": 0.15
+  }
+}

@@ -1,0 +1,6 @@
+variant,GO,SLOW-GO,NO-GO,REQUIRES RECCE
+baseline,60.7,27.9,10.2,1.2
+slope limits -5 deg,54.2,34.1,10.5,1.2
+slope limits +5 deg,61.7,27.1,10.0,1.2
+TWI thresholds -1,58.0,29.3,10.2,2.5
+TWI thresholds +1,61.4,27.5,10.2,0.8

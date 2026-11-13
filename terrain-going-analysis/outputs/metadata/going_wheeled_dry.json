@@ -1,0 +1,39 @@
+{
+  "standard": "ISO 19115-1 core profile (course subset) - see docs/05_GIS_METADATA_STANDARD.md",
+  "file_identifier": "going_wheeled_dry",
+  "file_name": "going_wheeled_dry.tif",
+  "title": "GOING wheeled dry",
+  "abstract": "GOING wheeled dry. Part of the AOI KESTREL rapid terrain package.",
+  "product_type": "raster",
+  "security_marking": "UNCLASSIFIED // EXERCISE ONLY // SYNTHETIC DATA",
+  "point_of_contact": "Course Syndicate GEO-1 (Geospatial Cell)",
+  "date_created_utc": "2026-11-13T20:23:00Z",
+  "data_currency": "Synthetic capture 'D-day 0'. Treat as stale after the period in docs/07_MAP_UPDATE_PROCEDURE.md",
+  "reference_system": "EPSG:32630",
+  "vertical_datum": "Ellipsoidal heights reduced to local geoid (notional)",
+  "extent_bbox": [
+    500000.0,
+    5600000.0,
+    501000.0,
+    5601000.0
+  ],
+  "spatial_resolution_m": 1.0,
+  "lineage": [
+    "Synthetic world generated (going.synth)",
+    "UAS survey + SfM photogrammetry simulated (going.uas)",
+    "Derived/classified by going pipeline using config/going_criteria.json"
+  ],
+  "positional_accuracy": "DTM RMSEz non-veg 0.05 m; veg 0.65 m; RMSEr 0.046 m",
+  "data_status": "SIMULATED - training product, not for operational use",
+  "criteria_version": "1.0",
+  "vehicle_profile": "wheeled_4x4",
+  "season": "wet",
+  "keywords": [
+    "terrain",
+    "GOING",
+    "UAS",
+    "trafficability"
+  ],
+  "checksum_sha256": "d1b3274c54547c053f17839ca2582a0f5dad8893c23ea0a6fcdb23278d72088d",
+  "software": "going-pipeline (Python/GDAL) v1.0"
+}

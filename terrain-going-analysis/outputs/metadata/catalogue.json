@@ -1,0 +1,142 @@
+[
+  {
+    "file_identifier": "orthomosaic_rgb",
+    "file_name": "orthomosaic_rgb.tif",
+    "title": "UAS RGB orthomosaic (simulated, 1 m)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "dsm",
+    "file_name": "dsm.tif",
+    "title": "Digital Surface Model (m)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "dtm",
+    "file_name": "dtm.tif",
+    "title": "Digital Terrain Model - bare earth (m)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "chm",
+    "file_name": "chm.tif",
+    "title": "Canopy/feature height model DSM-DTM (m)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "hillshade",
+    "file_name": "hillshade.tif",
+    "title": "Hillshade 315/45",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "slope_deg",
+    "file_name": "slope_deg.tif",
+    "title": "Slope (degrees, 2 m baseline)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "twi",
+    "file_name": "twi.tif",
+    "title": "Topographic Wetness Index",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "flow_accumulation_m2",
+    "file_name": "flow_accumulation_m2.tif",
+    "title": "D8 flow accumulation (m2)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "vari",
+    "file_name": "vari.tif",
+    "title": "Visible Atmospherically Resistant Index",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "canopy_cover",
+    "file_name": "canopy_cover.tif",
+    "title": "Canopy cover fraction (15 m window)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "vegetation_class",
+    "file_name": "vegetation_class.tif",
+    "title": "0 open,1 scrub,2 light wood,3 dense wood",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "data_confidence",
+    "file_name": "data_confidence.tif",
+    "title": "Ground-visibility confidence 0-1",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "going_class",
+    "file_name": "going_class.tif",
+    "title": "GOING class wheeled_4x4/wet: 1 GO 2 SLOW-GO 3 NO-GO 4 RECCE",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "going_reason",
+    "file_name": "going_reason.tif",
+    "title": "Rule that determined the GOING class (see reports/reason_codes.csv)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "going_wheeled_dry",
+    "file_name": "going_wheeled_dry.tif",
+    "title": "GOING wheeled dry",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "going_wheeled_wet",
+    "file_name": "going_wheeled_wet.tif",
+    "title": "GOING wheeled wet",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "going_tracked_wet",
+    "file_name": "going_tracked_wet.tif",
+    "title": "GOING tracked wet",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "speed_kmh",
+    "file_name": "speed_kmh.tif",
+    "title": "Illustrative cross-country speed (km/h)",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "viewshed_op_sierra",
+    "file_name": "viewshed_op_sierra.tif",
+    "title": "1 = visible from OP SIERRA",
+    "product_type": "raster",
+    "data_status": "SIMULATED - training product, not for operational use"
+  },
+  {
+    "file_identifier": "terrain_db",
+    "file_name": "terrain_db.gpkg",
+    "title": "AOI KESTREL terrain database",
+    "product_type": "vector",
+    "data_status": "SIMULATED - training product, not for operational use"
+  }
+]

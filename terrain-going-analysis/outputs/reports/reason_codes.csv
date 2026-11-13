@@ -1,0 +1,24 @@
+code,reason
+0,"Open, firm, gentle slope"
+1,Unpaved track
+2,Paved road
+10,Cultivated (soft when wet)
+11,Built-up area
+12,Scrub
+13,Light woodland
+14,Wet ground (TWI)
+15,Slope SLOW-GO band
+16,Low linear obstacle
+20,Very wet ground (TWI) - soil unknown
+21,Low UAS data confidence
+22,Marsh (dry season)
+23,Crossing - capacity/depth unknown
+24,Stream banks obscured by vegetation
+30,Slope above NO-GO limit
+31,Dense woodland
+32,Marsh (wet season)
+33,Water
+34,Building
+35,Linear obstacle above step limit
+36,Pylon footing
+90,Generalised (MMU)

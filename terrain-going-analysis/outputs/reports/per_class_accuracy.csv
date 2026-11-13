@@ -1,0 +1,4 @@
+class,users_accuracy,ua_95ci,producers_accuracy,pa_95ci,n_mapped
+GO,0.82,0.69-0.90,0.695,0.57-0.80,50
+SLOW-GO,0.6,0.46-0.72,0.6,0.46-0.72,50
+NO-GO,0.74,0.60-0.84,0.902,0.77-0.96,50

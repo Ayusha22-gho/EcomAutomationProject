@@ -1,0 +1,5 @@
+profile,season,GO %,SLOW-GO %,NO-GO %,REQUIRES RECCE %
+wheeled_4x4,dry,69.1,19.9,9.0,2.0
+wheeled_4x4,wet,60.7,27.9,10.2,1.2
+tracked,dry,73.4,15.4,6.1,5.0
+tracked,wet,64.9,23.5,7.4,4.2

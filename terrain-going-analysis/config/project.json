@@ -1,0 +1,40 @@
+{
+  "project": {
+    "name": "Rapid Terrain Mapping & GOING Analysis - Exercise TERRA SWIFT",
+    "aoi_name": "AOI KESTREL (notional)",
+    "marking": "UNCLASSIFIED // EXERCISE ONLY // SYNTHETIC DATA",
+    "producer": "Course Syndicate GEO-1 (Geospatial Cell)",
+    "version": "1.0"
+  },
+  "grid": {
+    "crs": "EPSG:32630",
+    "origin_x": 500000.0,
+    "origin_y": 5601000.0,
+    "resolution_m": 1.0,
+    "width_px": 1000,
+    "height_px": 1000,
+    "note": "Notional AOI. Coordinates are placeholders in a real projected CRS so that every product behaves like real data in QGIS. They do not depict a real place."
+  },
+  "random_seed": 20261113,
+  "primary_season": "wet",
+  "vehicle_profile": "wheeled_4x4",
+  "nominated_points": {
+    "SP_ALPHA": {"row": 955, "col": 60, "description": "Start point ALPHA - assembly area SW"},
+    "OBJ_BRAVO": {"row": 70, "col": 905, "description": "Objective BRAVO - ridge crest NE"}
+  },
+  "observation_point": {
+    "name": "OP / sensor site SIERRA",
+    "row": 600, "col": 700,
+    "observer_height_m": 3.0,
+    "target_height_m": 2.5,
+    "max_range_m": 1500,
+    "note": "Used for route exposure analysis and as an illustrative C-UAS / ISR sensor siting check."
+  },
+  "validation": {
+    "samples_per_class": 50,
+    "min_spacing_m": 20,
+    "observer_error_rate": 0.04,
+    "dem_checkpoints": 25,
+    "gnss_checkpoint_sigma_m": 0.02
+  }
+}
