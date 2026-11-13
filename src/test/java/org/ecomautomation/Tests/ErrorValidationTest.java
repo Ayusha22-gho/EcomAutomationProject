@@ -14,9 +14,9 @@ import java.util.List;
 public class ErrorValidationTest extends BaseTest {
 
     @Test(retryAnalyzer = Retry.class)
-    public void loginErrorValidation(r){
+    public void loginErrorValidation(){
         ProductCatalogue pdp = landingPage.loginApplication("ayghosh977@gmail.com","sample");
-        Assert.assertEquals("Incorrect email password.",landingPage.getErrorMessage());
+        Assert.assertEquals(landingPage.getErrorMessage(), "Incorrect email or password.");
 
     }
 
